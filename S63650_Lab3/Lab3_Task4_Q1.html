@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events - Change Paragraph Color</title>
+    <style>
+      p {
+        padding: 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function changeColor(event) {
+        var paragraph = document.getElementById("paragraph");
+
+        if (event.type === "click") {
+          paragraph.style.backgroundColor = "yellow";
+        } else if (event.type === "dblclick") {
+          paragraph.style.backgroundColor = "blue";
+        } else if (event.type === "mouseover") {
+          paragraph.style.backgroundColor = "red";
+        } else if (event.type === "mouseout") {
+          paragraph.style.backgroundColor = "green";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Mouse Events - Change Paragraph Color</h2>
+    <p
+      id="paragraph"
+      onclick="changeColor(event)"
+      ondblclick="changeColor(event)"
+      onmouseover="changeColor(event)"
+      onmouseout="changeColor(event)"
+    >
+      Saya sayang UMT ^_^
+    </p>
+  </body>
+</html>
